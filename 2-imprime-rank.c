@@ -1,3 +1,5 @@
+// Autor: Kleber
+
 // Imprime o rank do processo na tela
 
 #include <mpi.h>

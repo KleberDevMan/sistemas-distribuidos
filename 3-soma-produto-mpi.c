@@ -1,6 +1,13 @@
-// 2 processos:
-//      - processo 0: soma dois valores
-//      - processo 1: multiplica dois valores
+// Autor: Kleber
+
+// Processo 0:
+//      - Envia seu número inteiro para o Processo 1
+//      - Recebe o número inteiro do Processo 1
+//      - Imprime a soma dos dois valores
+// Processo 1:
+//      - Recebe o número inteiro do Processo 0
+//      - Envia seu número inteiro para o Processo 0
+//      - Imprime o produto dos dois valores
 
 #include <mpi.h>
 #include <stdio.h>
@@ -39,7 +46,7 @@ int main(void)
         printf("\n[Process %d/%d] Produto (%d * %d): %d", rank, num_processos, my_number, received_number, prod);
     }
     printf("\n");
-    
+
     MPI_Finalize(); // fim bloco compartilhado
     return 0;
 }

@@ -1,3 +1,5 @@
+// Autor: prof Jean
+
 // Enviar uma mensagem de todos os processos para o processo mestre
 
 #include <mpi.h>
